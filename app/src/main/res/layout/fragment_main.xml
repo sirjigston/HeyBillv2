@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/topSlider"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/colorAccent"
+                custom:auto_cycle="true"
+                custom:indicator_visibility="visible"
+                android:elevation="4dp"
+                custom:pager_animation="Default" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="1dp"
+                android:visibility="visible">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_horizental_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAllStatistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_xxmedium"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/spacing_xxmedium"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:minHeight="?attr/actionBarSize"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textViewAll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_total"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_80" />
+
+                        <ImageButton
+                            android:id="@+id/btn_f_main_all_statistics"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:tint="@color/grey_80"
+                            card_view:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_middle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/txt_cases_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_cases"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_80"
+                                    android:textSize="@dimen/txt_large" />
+
+                                <TextView
+                                    android:id="@+id/txt_deaths_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_deaths"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_80"
+                                    android:textSize="@dimen/txt_large" />
+
+                                <TextView
+                                    android:id="@+id/txt_recovered_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_recovered"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_80"
+                                    android:textSize="@dimen/txt_large" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/txt_cases"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="..."
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_800"
+                                    android:textSize="@dimen/txt_xxxlarge"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_deaths"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="..."
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorRed"
+                                    android:textSize="@dimen/txt_xxxlarge"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_recovered"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="..."
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorGreen"
+                                    android:textSize="@dimen/txt_xxxlarge"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCountryStatistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_xxmedium"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="@dimen/spacing_xxmedium"
+                android:layout_marginBottom="2dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:minHeight="?attr/actionBarSize"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textViewCountry"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_country"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_80" />
+
+                        <ImageButton
+                            android:id="@+id/btn_f_main_country_statistics"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:tint="@color/grey_80"
+                            card_view:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_middle">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/txt_cases_country_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_cases"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_80"
+                                    android:textSize="@dimen/txt_large" />
+
+                                <TextView
+                                    android:id="@+id/txt_deaths_country_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_deaths"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_80"
+                                    android:textSize="@dimen/txt_large" />
+
+                                <TextView
+                                    android:id="@+id/txt_recovered_country_title"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/txt_recovered"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_80"
+                                    android:textSize="@dimen/txt_large" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/txt_cases_country"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="..."
+                                    android:textAlignment="center"
+                                    android:textColor="@color/grey_800"
+                                    android:textSize="@dimen/txt_xxxlarge"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_deaths_country"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="..."
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorRed"
+                                    android:textSize="@dimen/txt_xxxlarge"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_recovered_country"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="..."
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorGreen"
+                                    android:textSize="@dimen/txt_xxxlarge"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvFeaturedContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="@dimen/spacing_xxmedium"
+                android:layout_marginRight="@dimen/spacing_xxmedium"
+                android:layout_marginTop="3dp"
+                android:visibility="visible"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:minHeight="?attr/actionBarSize"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_featured_title"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_80" />
+
+                        <ImageButton
+                            android:id="@+id/btn_f_main_featured_show_all"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            card_view:srcCompat="@drawable/ic_arrow_forward_black_24dp"
+                            android:tint="@color/grey_80" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_expand_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_middle">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_f_main_featured_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="174dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvLatestContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_xxmedium"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="@dimen/spacing_xxmedium"
+                android:layout_marginBottom="@dimen/spacing_xxmedium"
+                android:visibility="visible"
+                card_view:cardCornerRadius="1dp"
+                card_view:cardElevation="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:minHeight="?attr/actionBarSize"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/spacing_large"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/txt_latest_title"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/grey_80" />
+
+                        <ImageButton
+                            android:id="@+id/btn_f_main_latest_show_all"
+                            android:layout_width="?attr/actionBarSize"
+                            android:layout_height="?attr/actionBarSize"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:tint="@color/grey_80"
+                            card_view:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/spacing_middle">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_f_main_latest_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="174dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginRight="2dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- We need this loading wheel, only when loading more -->
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/main_progress_wheel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        wheel:matProg_barColor="@color/colorPrimaryDark"
+        wheel:matProg_progressIndeterminate="true" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1069390299616",
+    "firebase_url": "https://imss-push.firebaseio.com",
+    "project_id": "imss-push",
+    "storage_bucket": "imss-push.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069390299616:android:1775bec16a17a40cd7ab85",
+        "android_client_info": {
+          "package_name": "com.jigwtf.heybill"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069390299616-t1nbccv01spai0gh6vfj44rbajrq9bcd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgSUxOXE2ONwOt4RvGgcK1ENPSJCMZlGM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069390299616-t1nbccv01spai0gh6vfj44rbajrq9bcd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
