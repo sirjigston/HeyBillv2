@@ -14,7 +14,7 @@
     <string name="screen3_title">Real Time Information</string>
     <string name="screen3_desc">Follow All Statistics</string>
     <string name="screen4_title">Search</string>
-    <string name="screen4_desc">You can search news</string>
+    <string name="screen4_desc">Search for information</string>
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="start">OK!</string>
@@ -206,7 +206,7 @@
     <string name="txt_coin">coin</string>
     <string name="txt_how_to_reward_coin">How to reward coin?</string>
     <string name="txt_access_permission">Access Permission</string>
-    <string name="txt_this_content_is_for_vip_user_role">This content is for VIP User.</string>
+    <string name="txt_this_content_is_for_vip_user_role">This content is for VIP Users.</string>
     <string name="txt_upgrade_role">Role Upgrade</string>
     <string name="txt_about_application">About Application</string>
 
@@ -285,7 +285,7 @@
     <string name="txt_total">Total</string>
     <string name="txt_country">Country</string>
     <string name="nav_emergency_call">Emergency Call</string>
-    <string name="nav_source">Sources</string>
-    <string name="txt_source_and_references">Sources and References</string>
+    <string name="nav_source">Resources</string>
+    <string name="txt_source_and_references">References</string>
 
 </resources>

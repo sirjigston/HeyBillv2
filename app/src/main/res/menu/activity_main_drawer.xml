@@ -24,7 +24,7 @@
             android:title="@string/nav_bookmark" />
         <item
             android:id="@+id/nav_source"
-            android:icon="@drawable/ic_copyright_black_24dp"
+            android:icon="@android:drawable/ic_dialog_info"
             android:title="@string/nav_source" />
         <item
             android:id="@+id/nav_contact"
@@ -36,8 +36,11 @@
             android:title="@string/nav_about_app" />
         <item
             android:id="@+id/nav_share_app"
+            android:checkable="false"
+            android:enabled="false"
             android:icon="@drawable/icon_share_black_24"
-            android:title="@string/nav_share_app" />
+            android:title="@string/nav_share_app"
+            android:visible="false" />
     </group>
 
     <item android:title="@string/nav_txt_others"

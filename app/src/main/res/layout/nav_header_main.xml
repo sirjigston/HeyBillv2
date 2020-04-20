@@ -11,13 +11,13 @@
         android:background="@color/colorPrimaryDark"
         android:scaleType="fitCenter"
         android:src="@drawable/valogo"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:contentDescription="TODO" />
 
     <LinearLayout
         android:id="@+id/navLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/nav_header_height"
-        android:gravity="bottom"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -27,7 +27,7 @@
             android:layout_height="68dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
-            android:elevation="4dp"
+            android:contentDescription="TODO"
             android:src="@mipmap/ic_launcher"
             android:visibility="gone" />
 

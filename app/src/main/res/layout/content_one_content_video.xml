@@ -169,11 +169,11 @@
             android:id="@+id/cv_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_lsmall"
             android:layout_marginLeft="@dimen/spacing_xxmedium"
-            android:layout_marginRight="@dimen/spacing_xxmedium"
             android:layout_marginTop="@dimen/spacing_lsmall"
-            android:visibility="visible"
+            android:layout_marginRight="@dimen/spacing_xxmedium"
+            android:layout_marginBottom="@dimen/spacing_lsmall"
+            android:visibility="gone"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp">
 
@@ -207,8 +207,8 @@
                         android:layout_width="?attr/actionBarSize"
                         android:layout_height="?attr/actionBarSize"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        app:srcCompat="@drawable/ic_arrow_forward_black_24dp"
-                        android:tint="@color/grey_80" />
+                        android:tint="@color/grey_80"
+                        app:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
 
                 </LinearLayout>
 
@@ -358,17 +358,17 @@
                         app:layout_constraintTop_toTopOf="@+id/progressBarFiveStar" />
 
                     <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:text="4"
-                    android:textSize="@dimen/txt_small"
-                    app:layout_constraintBottom_toBottomOf="@+id/progressBarFourStar"
-                    app:layout_constraintEnd_toStartOf="@+id/progressBarFourStar"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/progressBarFourStar" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="4"
+                        android:textSize="@dimen/txt_small"
+                        app:layout_constraintBottom_toBottomOf="@+id/progressBarFourStar"
+                        app:layout_constraintEnd_toStartOf="@+id/progressBarFourStar"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/progressBarFourStar" />
 
                     <TextView
                         android:layout_width="wrap_content"

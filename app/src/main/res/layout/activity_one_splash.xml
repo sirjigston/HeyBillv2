@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageViewOneSplash"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="202dp"
+        android:layout_height="185dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -50,9 +50,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:indeterminateTint="@color/colorAccent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTryAgain" />
+        app:layout_constraintTop_toBottomOf="@+id/btnTryAgain"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

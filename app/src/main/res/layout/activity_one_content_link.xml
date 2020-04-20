@@ -106,21 +106,23 @@
             android:id="@+id/fab_add_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_size="mini"
             app:fab_colorNormal="@color/amber_900"
             app:fab_colorPressed="@color/amber_950"
+            app:fab_size="mini"
             app:fab_title="@string/txt_add_comment"
-            app:srcCompat="@drawable/ic_rate_review_white_24dp" />
+            app:srcCompat="@drawable/ic_rate_review_white_24dp"
+            tools:visibility="gone" />
 
         <net.i2p.android.ext.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_show_comment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_size="mini"
             app:fab_colorNormal="@color/purple_A200"
             app:fab_colorPressed="@color/purple_A400"
+            app:fab_size="mini"
             app:fab_title="@string/txt_show_comment"
-            app:srcCompat="@drawable/ic_insert_comment_white_24dp" />
+            app:srcCompat="@drawable/ic_insert_comment_white_24dp"
+            tools:visibility="gone" />
 
         <net.i2p.android.ext.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_bookmark"
